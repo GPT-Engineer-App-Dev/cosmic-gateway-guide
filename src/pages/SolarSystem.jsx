@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const SOLAR_SYSTEM_SCALE = 1 / 20000000; // 1 pixel = 20,000 km
-const PLANET_SCALE = 1 / 5000; // 1 pixel = 5,000 km
+const PLANET_SCALE = 1 / 3000; // 1 pixel = 3,000 km
 const SUN_RADIUS = 696340; // km
 const SUN_SCALE = 1 / 50000; // 1 pixel = 50,000 km (for sun only)
 
@@ -27,7 +27,7 @@ const SolarSystem = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime((prevTime) => prevTime + 1);
+      setTime((prevTime) => prevTime + 5);
     }, 50);
     return () => clearInterval(interval);
   }, []);
@@ -85,6 +85,7 @@ const SolarSystem = () => {
                 borderRadius: '50%',
                 x: -planet.size / 2,
                 y: -planet.size / 2,
+                boxShadow: `0 0 ${planet.size / 2}px ${planet.color}`,
               }}
               animate={{
                 x: Math.cos((time / planet.orbitPeriod) * 2 * Math.PI) * planet.orbitRadius - planet.size / 2,
