@@ -13,7 +13,7 @@ const Index = () => {
           <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
             Start Your Adventure
           </Button>
-          <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-blue-900">
+          <Button size="lg" variant="outline" asChild className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600">
             <Link to="/solar-system" className="flex items-center gap-2">
               <Sun className="h-5 w-5" />
               Explore Solar System
