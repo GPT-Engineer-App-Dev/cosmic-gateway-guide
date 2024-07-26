@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { RocketIcon, StarIcon, PlanetIcon } from "lucide-react";
+import { RocketIcon, StarIcon, GlobeIcon } from "lucide-react";
 
 const Index = () => {
   return (
@@ -24,7 +24,7 @@ const Index = () => {
               description="The observable universe contains more than 100 billion galaxies."
             />
             <FactCard
-              icon={<PlanetIcon className="h-12 w-12 text-blue-500" />}
+              icon={<GlobeIcon className="h-12 w-12 text-blue-500" />}
               title="Exoplanets Galore"
               description="Thousands of planets outside our solar system have been discovered."
             />
