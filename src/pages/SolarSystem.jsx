@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 const SOLAR_SYSTEM_SCALE = 1 / 20000000; // 1 pixel = 20,000 km
 const PLANET_SCALE = 1 / 3000; // 1 pixel = 3,000 km
@@ -16,6 +17,7 @@ const planets = [
   { name: "Saturn", color: "#F4A460", radius: 58232, distance: 1.434e9, orbitPeriod: 10759 },
   { name: "Uranus", color: "#00FFFF", radius: 25362, distance: 2.871e9, orbitPeriod: 30687 },
   { name: "Neptune", color: "#4169E1", radius: 24622, distance: 4.495e9, orbitPeriod: 60190 },
+  { name: "Pluto", color: "#8B4513", radius: 1188.3, distance: 5.9e9, orbitPeriod: 90560 },
 ].map(planet => ({
   ...planet,
   orbitRadius: planet.distance * SOLAR_SYSTEM_SCALE,
@@ -24,6 +26,8 @@ const planets = [
 
 const SolarSystem = () => {
   const [time, setTime] = useState(0);
+  const [focus, setFocus] = useState(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,9 +36,27 @@ const SolarSystem = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const focusOnPluto = () => {
+    const pluto = planets.find(p => p.name === "Pluto");
+    if (pluto) {
+      setFocus(pluto);
+      if (containerRef.current) {
+        const x = Math.cos((time / pluto.orbitPeriod) * 2 * Math.PI) * pluto.orbitRadius;
+        const y = Math.sin((time / pluto.orbitPeriod) * 2 * Math.PI) * pluto.orbitRadius;
+        containerRef.current.style.transform = `translate(${-x}px, ${-y}px)`;
+      }
+    }
+  };
+
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <Button 
+        className="absolute top-4 left-4 z-10 bg-blue-500 hover:bg-blue-600 text-white"
+        onClick={focusOnPluto}
+      >
+        Focus on Pluto
+      </Button>
+      <div ref={containerRef} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-1000">
         {/* Stars */}
         {[...Array(1000)].map((_, i) => {
           const size = Math.random() * 2 + 1;
