@@ -87,7 +87,7 @@ const SolarSystem = () => {
                 y: Math.sin((time / planet.orbitPeriod) * 2 * Math.PI) * planet.orbitRadius - planet.size / 2,
               }}
             />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>
