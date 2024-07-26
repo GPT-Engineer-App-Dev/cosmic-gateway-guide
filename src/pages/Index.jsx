@@ -15,30 +15,30 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center py-20 px-4 text-center bg-gradient-to-b from-black to-blue-900 text-white">
-        <h1 className="text-5xl font-bold mb-6">Discover Pluto</h1>
-        <p className="text-xl mb-8 max-w-2xl">Embark on a journey to the edge of our solar system and explore the mysterious dwarf planet Pluto.</p>
+      <section className="flex flex-col items-center justify-center py-20 px-4 text-center bg-gradient-to-b from-black to-orange-900 text-white">
+        <h1 className="text-5xl font-bold mb-6">Explore Jupiter</h1>
+        <p className="text-xl mb-8 max-w-2xl">Embark on a journey to the largest planet in our solar system and discover the wonders of the gas giant Jupiter.</p>
         <div className="flex gap-4">
           <Dialog>
             <DialogTrigger asChild>
-              <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
-                Learn About Pluto
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+                Learn About Jupiter
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle>Welcome to the World of Pluto!</DialogTitle>
+                <DialogTitle>Welcome to the World of Jupiter!</DialogTitle>
                 <DialogDescription>
-                  Discover the fascinating facts about this distant dwarf planet and its exploration.
+                  Discover the fascinating facts about the largest planet in our solar system and its exploration.
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
-                <p>Here's what you'll learn about Pluto:</p>
+                <p>Here's what you'll learn about Jupiter:</p>
                 <ul className="list-disc list-inside space-y-1">
-                  <li>Its discovery and reclassification</li>
-                  <li>Physical characteristics and composition</li>
-                  <li>Pluto's moons and orbital dynamics</li>
-                  <li>The New Horizons mission and its findings</li>
+                  <li>Its massive size and composition</li>
+                  <li>The Great Red Spot and other atmospheric features</li>
+                  <li>Jupiter's moons and their unique characteristics</li>
+                  <li>NASA's missions to explore Jupiter</li>
                 </ul>
               </div>
             </DialogContent>
@@ -55,22 +55,22 @@ const Index = () => {
       {/* Key Facts Section */}
       <section className="py-16 px-4 bg-gray-100">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Fascinating Pluto Facts</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Fascinating Jupiter Facts</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FactCard
               icon={<StarIcon className="h-12 w-12 text-yellow-400" />}
-              title="Dwarf Planet"
-              description="Pluto was reclassified from a planet to a dwarf planet in 2006."
+              title="King of Planets"
+              description="Jupiter is the largest planet in our solar system, more than twice as massive as all other planets combined."
             />
             <FactCard
-              icon={<GlobeIcon className="h-12 w-12 text-blue-500" />}
-              title="Heart of Pluto"
-              description="Pluto has a heart-shaped glacier larger than Texas and Oklahoma combined."
+              icon={<GlobeIcon className="h-12 w-12 text-red-500" />}
+              title="Great Red Spot"
+              description="Jupiter's Great Red Spot is a giant storm that has been raging for over 400 years."
             />
             <FactCard
-              icon={<RocketIcon className="h-12 w-12 text-red-500" />}
-              title="New Horizons"
-              description="NASA's New Horizons spacecraft made a historic flyby of Pluto in July 2015."
+              icon={<RocketIcon className="h-12 w-12 text-blue-500" />}
+              title="Galilean Moons"
+              description="Jupiter has 79 known moons, including the four large Galilean moons discovered by Galileo Galilei in 1610."
             />
           </div>
         </div>
@@ -79,42 +79,37 @@ const Index = () => {
       {/* Timeline Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Timeline of Pluto Exploration</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Timeline of Jupiter Exploration</h2>
           <div className="space-y-8">
             <TimelineEvent
-              year="1930"
-              title="Discovery of Pluto"
-              description="Clyde Tombaugh discovers Pluto at the Lowell Observatory."
+              year="1610"
+              title="Galileo's Discovery"
+              description="Galileo Galilei discovers Jupiter's four largest moons: Io, Europa, Ganymede, and Callisto."
             />
             <TimelineEvent
-              year="1978"
-              title="Charon Discovered"
-              description="James Christy discovers Pluto's largest moon, Charon."
+              year="1973"
+              title="Pioneer 10"
+              description="Pioneer 10 becomes the first spacecraft to fly by Jupiter, providing close-up images of the Great Red Spot."
             />
             <TimelineEvent
-              year="1988"
-              title="Pluto's Atmosphere"
-              description="Evidence of Pluto's atmosphere is first observed."
+              year="1979"
+              title="Voyager Missions"
+              description="Voyager 1 and 2 fly by Jupiter, revealing detailed images of the planet and its moons."
             />
             <TimelineEvent
-              year="2006"
-              title="Reclassification"
-              description="Pluto is reclassified as a dwarf planet by the International Astronomical Union."
-            />
-            <TimelineEvent
-              year="2015"
-              title="New Horizons Flyby"
-              description="NASA's New Horizons spacecraft conducts a historic flyby of Pluto, providing unprecedented close-up images and data."
+              year="1995"
+              title="Galileo Orbiter"
+              description="The Galileo spacecraft becomes the first to orbit Jupiter, studying the planet for almost 8 years."
             />
             <TimelineEvent
               year="2016"
-              title="Pluto's 'Heart'"
-              description="Scientists discover that Pluto's heart-shaped region, Sputnik Planitia, is an active glacier of nitrogen ice."
+              title="Juno Mission"
+              description="NASA's Juno spacecraft enters Jupiter's orbit to study the planet's composition, gravity field, magnetic field, and polar magnetosphere."
             />
             <TimelineEvent
-              year="2018"
-              title="Potential Subsurface Ocean"
-              description="Research suggests Pluto may have a subsurface ocean beneath its icy shell."
+              year="2021"
+              title="Juno's Extended Mission"
+              description="Juno's mission is extended to focus on Jupiter's moons and rings, as well as its complex magnetic environment."
             />
           </div>
         </div>
