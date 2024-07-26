@@ -35,19 +35,22 @@ const SolarSystem = () => {
     <div className="relative w-full h-screen bg-black overflow-hidden">
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* Stars */}
-        {[...Array(1000)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full"
-            style={{
-              width: Math.random() * 2 + 1,
-              height: Math.random() * 2 + 1,
-              left: Math.random() * window.innerWidth,
-              top: Math.random() * window.innerHeight,
-              opacity: Math.random() * 0.8 + 0.2,
-            }}
-          />
-        ))}
+        {[...Array(1000)].map((_, i) => {
+          const size = Math.random() * 2 + 1;
+          return (
+            <div
+              key={i}
+              className="absolute bg-white rounded-full"
+              style={{
+                width: size,
+                height: size,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.8 + 0.2,
+              }}
+            />
+          );
+        })}
 
         {/* Sun */}
         <div
