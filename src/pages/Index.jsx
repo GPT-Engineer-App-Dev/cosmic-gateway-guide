@@ -84,7 +84,7 @@ const Index = () => {
             <TimelineEvent
               year="1610"
               title="Galileo's Discovery"
-              description="Galileo Galilei discovers Jupiter's four largest moons: Io, Europa, Ganymede, and Callisto."
+              description="Galileo Galilei discovers Jupiter's four largest moons: Europa, Io, Ganymede, and Callisto."
             />
             <TimelineEvent
               year="1973"
