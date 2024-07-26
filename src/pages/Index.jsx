@@ -86,6 +86,31 @@ const Index = () => {
               title="SpaceX Crew Dragon"
               description="SpaceX's Crew Dragon becomes the first commercial spacecraft to take astronauts to the International Space Station."
             />
+            <TimelineEvent
+              year="2023"
+              title="JUICE Launch"
+              description="ESA's Jupiter Icy Moons Explorer (JUICE) mission launches, aiming to study Jupiter and its largest moons."
+            />
+            <TimelineEvent
+              year="2029"
+              title="JUICE Arrival"
+              description="JUICE is expected to arrive at Jupiter and begin its detailed study of the Jovian system."
+            />
+            <TimelineEvent
+              year="2030"
+              title="Europa Clipper Launch"
+              description="NASA's Europa Clipper mission is scheduled to launch, focusing on studying Jupiter's moon Europa."
+            />
+            <TimelineEvent
+              year="2035"
+              title="Europa Clipper Arrival"
+              description="Europa Clipper is expected to arrive at Jupiter and begin its study of Europa's potential habitability."
+            />
+            <TimelineEvent
+              year="2040"
+              title="Potential Jovian Moon Lander"
+              description="Speculative mission: A lander mission to one of Jupiter's moons, possibly Europa or Ganymede, to search for signs of life."
+            />
           </div>
         </div>
       </section>
