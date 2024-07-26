@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { RocketIcon, StarIcon, GlobeIcon } from "lucide-react";
+import { RocketIcon, StarIcon, GlobeIcon, Milestone } from "lucide-react";
 
 const Index = () => {
   return (
@@ -37,6 +37,50 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Timeline Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Timeline of Space Exploration</h2>
+          <div className="space-y-8">
+            <TimelineEvent
+              year="1957"
+              title="Sputnik 1"
+              description="The Soviet Union launches the first artificial satellite into Earth's orbit."
+            />
+            <TimelineEvent
+              year="1961"
+              title="Yuri Gagarin"
+              description="Soviet cosmonaut Yuri Gagarin becomes the first human to journey into outer space."
+            />
+            <TimelineEvent
+              year="1969"
+              title="Apollo 11 Moon Landing"
+              description="NASA astronauts Neil Armstrong and Buzz Aldrin become the first humans to walk on the Moon."
+            />
+            <TimelineEvent
+              year="1990"
+              title="Hubble Space Telescope"
+              description="The Hubble Space Telescope is launched into low Earth orbit."
+            />
+            <TimelineEvent
+              year="2004"
+              title="Mars Exploration Rovers"
+              description="NASA's rovers Spirit and Opportunity land on Mars to begin exploration of the planet's surface."
+            />
+            <TimelineEvent
+              year="2015"
+              title="Pluto Flyby"
+              description="NASA's New Horizons spacecraft conducts a flyby of Pluto, providing the first close-up images of the dwarf planet."
+            />
+            <TimelineEvent
+              year="2020"
+              title="SpaceX Crew Dragon"
+              description="SpaceX's Crew Dragon becomes the first commercial spacecraft to take astronauts to the International Space Station."
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <section className="py-16 px-4 bg-blue-900 text-white text-center">
         <h2 className="text-3xl font-bold mb-6">Ready to Explore Further?</h2>
@@ -54,6 +98,22 @@ const FactCard = ({ icon, title, description }) => (
     {icon}
     <h3 className="text-xl font-semibold mt-4 mb-2">{title}</h3>
     <p className="text-gray-600">{description}</p>
+  </div>
+);
+
+const TimelineEvent = ({ year, title, description }) => (
+  <div className="flex">
+    <div className="flex flex-col items-center mr-4">
+      <div className="flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full">
+        <Milestone className="w-4 h-4 text-white" />
+      </div>
+      <div className="w-px h-full bg-blue-300"></div>
+    </div>
+    <div className="pb-8">
+      <p className="mb-2 text-lg font-bold text-blue-600">{year}</p>
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
   </div>
 );
 
