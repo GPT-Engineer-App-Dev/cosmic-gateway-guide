@@ -87,9 +87,19 @@ const Index = () => {
               description="Galileo Galilei discovers Jupiter's four largest moons: Europa, Ganymede, Io, and Callisto."
             />
             <TimelineEvent
+              year="1664"
+              title="Great Red Spot"
+              description="Robert Hooke observes and records a spot on Jupiter, possibly the first observation of the Great Red Spot."
+            />
+            <TimelineEvent
               year="1973"
               title="Pioneer 10"
               description="Pioneer 10 becomes the first spacecraft to fly by Jupiter, providing close-up images of the Great Red Spot."
+            />
+            <TimelineEvent
+              year="1974"
+              title="Pioneer 11"
+              description="Pioneer 11 flies by Jupiter, capturing more detailed images and data about the planet's magnetic field."
             />
             <TimelineEvent
               year="1979"
@@ -97,9 +107,29 @@ const Index = () => {
               description="Voyager 1 and 2 fly by Jupiter, revealing detailed images of the planet and its moons."
             />
             <TimelineEvent
+              year="1992"
+              title="Ulysses Solar Probe"
+              description="Ulysses spacecraft uses Jupiter's gravity to change its trajectory for solar polar orbit."
+            />
+            <TimelineEvent
+              year="1994"
+              title="Shoemaker-Levy 9 Impact"
+              description="Comet Shoemaker-Levy 9 collides with Jupiter, the first observed collision of two solar system bodies."
+            />
+            <TimelineEvent
               year="1995"
               title="Galileo Orbiter"
               description="The Galileo spacecraft becomes the first to orbit Jupiter, studying the planet for almost 8 years."
+            />
+            <TimelineEvent
+              year="2000"
+              title="Cassini Flyby"
+              description="The Cassini spacecraft, en route to Saturn, makes a flyby of Jupiter, providing high-resolution images."
+            />
+            <TimelineEvent
+              year="2007"
+              title="New Horizons Flyby"
+              description="New Horizons spacecraft, on its way to Pluto, uses Jupiter for a gravity assist maneuver."
             />
             <TimelineEvent
               year="2016"
