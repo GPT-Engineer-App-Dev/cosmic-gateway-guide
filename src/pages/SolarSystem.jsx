@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const SOLAR_SYSTEM_SCALE = 1 / 20000000; // 1 pixel = 20,000 km
-const PLANET_SCALE = 1 / 5000; // 1 pixel = 5,000 km
+const SOLAR_SYSTEM_SCALE = 1 / 100000000; // 1 pixel = 100,000 km
+const PLANET_SCALE = 1 / 1000; // 1 pixel = 1,000 km
 const SUN_RADIUS = 696340; // km
+const SUN_SCALE = 1 / 50000; // 1 pixel = 50,000 km (for sun only)
 
 const planets = [
   { name: "Mercury", color: "#A9A9A9", radius: 2439.7, distance: 57.9e6, orbitPeriod: 88 },
@@ -18,7 +19,7 @@ const planets = [
 ].map(planet => ({
   ...planet,
   orbitRadius: planet.distance * SOLAR_SYSTEM_SCALE,
-  size: Math.max(2, planet.radius * PLANET_SCALE * 2),
+  size: Math.max(3, planet.radius * PLANET_SCALE * 2),
 }));
 
 const SolarSystem = () => {
@@ -56,10 +57,10 @@ const SolarSystem = () => {
         <div
           className="absolute rounded-full"
           style={{
-            width: Math.max(20, SUN_RADIUS * PLANET_SCALE * 2),
-            height: Math.max(20, SUN_RADIUS * PLANET_SCALE * 2),
+            width: Math.max(10, SUN_RADIUS * SUN_SCALE * 2),
+            height: Math.max(10, SUN_RADIUS * SUN_SCALE * 2),
             background: 'radial-gradient(circle, #FDB813 0%, #FFA500 70%, #FF4500 100%)',
-            boxShadow: '0 0 100px #FDB813, 0 0 200px #FFA500',
+            boxShadow: '0 0 50px #FDB813, 0 0 100px #FFA500',
             transform: 'translate(-50%, -50%)',
           }}
         />
