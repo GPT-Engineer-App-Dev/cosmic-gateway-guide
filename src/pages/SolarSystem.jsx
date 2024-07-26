@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const SOLAR_SYSTEM_SCALE = 1 / 100000000; // 1 pixel = 100,000 km
-const PLANET_SCALE = 1 / 1000; // 1 pixel = 1,000 km
+const SOLAR_SYSTEM_SCALE = 1 / 20000000; // 1 pixel = 20,000 km
+const PLANET_SCALE = 1 / 5000; // 1 pixel = 5,000 km
 const SUN_RADIUS = 696340; // km
 const SUN_SCALE = 1 / 50000; // 1 pixel = 50,000 km (for sun only)
 
