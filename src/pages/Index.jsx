@@ -1,52 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { RocketIcon, StarIcon, GlobeIcon, Milestone, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center py-20 px-4 text-center bg-gradient-to-b from-black to-orange-900 text-white">
-        <h1 className="text-5xl font-bold mb-6">Explore Jupiter</h1>
-        <p className="text-xl mb-8 max-w-2xl">Embark on a journey to the largest planet in our solar system and discover the wonders of the gas giant Jupiter.</p>
+      <section className="flex flex-col items-center justify-center py-20 px-4 text-center bg-gradient-to-b from-black to-blue-900 text-white">
+        <h1 className="text-5xl font-bold mb-6">Explore the Cosmos</h1>
+        <p className="text-xl mb-8 max-w-2xl">Embark on a journey through the stars and discover the wonders of our universe.</p>
         <div className="flex gap-4">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
-                Learn About Jupiter
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Welcome to the World of Jupiter!</DialogTitle>
-                <DialogDescription>
-                  Discover the fascinating facts about the largest planet in our solar system and its exploration.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 py-4">
-                <p>Here's what you'll learn about Jupiter:</p>
-                <ul className="list-disc list-inside space-y-1">
-                  <li>Its massive size and composition</li>
-                  <li>The Great Red Spot and other atmospheric features</li>
-                  <li>Jupiter's moons and their unique characteristics</li>
-                  <li>NASA's missions to explore Jupiter</li>
-                </ul>
-              </div>
-            </DialogContent>
-          </Dialog>
-          <Button size="lg" variant="outline" asChild className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600">
+          <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
+            Start Your Adventure
+          </Button>
+          <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-blue-900">
             <Link to="/solar-system" className="flex items-center gap-2">
               <Sun className="h-5 w-5" />
-              View Solar System
+              Explore Solar System
             </Link>
           </Button>
         </div>
@@ -55,22 +25,22 @@ const Index = () => {
       {/* Key Facts Section */}
       <section className="py-16 px-4 bg-gray-100">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Fascinating Jupiter Facts</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Fascinating Space Facts</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FactCard
               icon={<StarIcon className="h-12 w-12 text-yellow-400" />}
-              title="King of Planets"
-              description="Jupiter is the largest planet in our solar system, more than twice as massive as all other planets combined."
+              title="Billions of Galaxies"
+              description="The observable universe contains more than 100 billion galaxies."
             />
             <FactCard
-              icon={<GlobeIcon className="h-12 w-12 text-red-500" />}
-              title="Great Red Spot"
-              description="Jupiter's Great Red Spot is a giant storm that has been raging for over 400 years."
+              icon={<GlobeIcon className="h-12 w-12 text-blue-500" />}
+              title="Exoplanets Galore"
+              description="Thousands of planets outside our solar system have been discovered."
             />
             <FactCard
-              icon={<RocketIcon className="h-12 w-12 text-blue-500" />}
-              title="Galilean Moons"
-              description="Jupiter has 79 known moons, including the four large Galilean moons discovered by Galileo Galilei in 1610."
+              icon={<RocketIcon className="h-12 w-12 text-red-500" />}
+              title="Space Exploration"
+              description="Humans have been in space for over 60 years, pushing the boundaries of exploration."
             />
           </div>
         </div>
@@ -79,37 +49,42 @@ const Index = () => {
       {/* Timeline Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Timeline of Jupiter exploration</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Timeline of Space Exploration</h2>
           <div className="space-y-8">
             <TimelineEvent
-              year="1610"
-              title="Galileo's Discovery"
-              description="Galileo Galilei discovers Jupiter's four largest moons: Io, Europa, Ganymede, and Callisto."
+              year="1957"
+              title="Sputnik 1"
+              description="The Soviet Union launches the first artificial satellite into Earth's orbit."
             />
             <TimelineEvent
-              year="1973"
-              title="Pioneer 10"
-              description="Pioneer 10 becomes the first spacecraft to fly by Jupiter, providing close-up images of the Great Red Spot."
+              year="1961"
+              title="Yuri Gagarin"
+              description="Soviet cosmonaut Yuri Gagarin becomes the first human to journey into outer space."
             />
             <TimelineEvent
-              year="1979"
-              title="Voyager Missions"
-              description="Voyager 1 and 2 fly by Jupiter, revealing detailed images of the planet and its moons."
+              year="1969"
+              title="Apollo 11 Moon Landing"
+              description="NASA astronauts Neil Armstrong and Buzz Aldrin become the first humans to walk on the Moon."
             />
             <TimelineEvent
-              year="1995"
-              title="Galileo Orbiter"
-              description="The Galileo spacecraft becomes the first to orbit Jupiter, studying the planet for almost 8 years."
+              year="1990"
+              title="Hubble Space Telescope"
+              description="The Hubble Space Telescope is launched into low Earth orbit."
             />
             <TimelineEvent
-              year="2016"
-              title="Juno Mission"
-              description="NASA's Juno spacecraft enters Jupiter's orbit to study the planet's composition, gravity field, magnetic field, and polar magnetosphere."
+              year="2004"
+              title="Mars Exploration Rovers"
+              description="NASA's rovers Spirit and Opportunity land on Mars to begin exploration of the planet's surface."
             />
             <TimelineEvent
-              year="2021"
-              title="Juno's Extended Mission"
-              description="Juno's mission is extended to focus on Jupiter's moons and rings, as well as its complex magnetic environment."
+              year="2015"
+              title="Pluto Flyby"
+              description="NASA's New Horizons spacecraft conducts a flyby of Pluto, providing the first close-up images of the dwarf planet."
+            />
+            <TimelineEvent
+              year="2020"
+              title="SpaceX Crew Dragon"
+              description="SpaceX's Crew Dragon becomes the first commercial spacecraft to take astronauts to the International Space Station."
             />
           </div>
         </div>
