@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { RocketIcon, StarIcon, GlobeIcon, Milestone } from "lucide-react";
+import { RocketIcon, StarIcon, GlobeIcon, Milestone, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -8,9 +9,17 @@ const Index = () => {
       <section className="flex flex-col items-center justify-center py-20 px-4 text-center bg-gradient-to-b from-black to-blue-900 text-white">
         <h1 className="text-5xl font-bold mb-6">Explore the Cosmos</h1>
         <p className="text-xl mb-8 max-w-2xl">Embark on a journey through the stars and discover the wonders of our universe.</p>
-        <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
-          Start Your Adventure
-        </Button>
+        <div className="flex gap-4">
+          <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
+            Start Your Adventure
+          </Button>
+          <Button size="lg" variant="outline" asChild>
+            <Link to="/solar-system" className="flex items-center gap-2">
+              <Sun className="h-5 w-5" />
+              Explore Solar System
+            </Link>
+          </Button>
+        </div>
       </section>
 
       {/* Key Facts Section */}
