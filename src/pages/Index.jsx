@@ -1,6 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { RocketIcon, StarIcon, GlobeIcon, Milestone, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const Index = () => {
   return (
@@ -10,9 +19,30 @@ const Index = () => {
         <h1 className="text-5xl font-bold mb-6">Explore the Cosmos</h1>
         <p className="text-xl mb-8 max-w-2xl">Embark on a journey through the stars and discover the wonders of our universe.</p>
         <div className="flex gap-4">
-          <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
-            Start Your Adventure
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
+                Start Your Adventure
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Welcome to Your Space Adventure!</DialogTitle>
+                <DialogDescription>
+                  Embark on an exciting journey through the cosmos. Discover planets, stars, and the wonders of our universe.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <p>Here's what you can expect on your adventure:</p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Explore the solar system</li>
+                  <li>Learn about distant galaxies</li>
+                  <li>Understand the basics of space travel</li>
+                  <li>Discover the latest in space technology</li>
+                </ul>
+              </div>
+            </DialogContent>
+          </Dialog>
           <Button size="lg" variant="outline" asChild className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600">
             <Link to="/solar-system" className="flex items-center gap-2">
               <Sun className="h-5 w-5" />
