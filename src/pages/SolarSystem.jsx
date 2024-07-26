@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -86,7 +87,7 @@ const SolarSystem = () => {
                 y: Math.sin((time / planet.orbitPeriod) * 2 * Math.PI) * planet.orbitRadius - planet.size / 2,
               }}
             />
-          </React.Fragment>
+          </>
         ))}
       </div>
     </div>
