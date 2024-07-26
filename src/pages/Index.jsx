@@ -79,7 +79,7 @@ const Index = () => {
       {/* Timeline Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Timeline of Jupiter Exploration</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Timeline of Jupiter exploration</h2>
           <div className="space-y-8">
             <TimelineEvent
               year="1610"
